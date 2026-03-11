@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Corruption Pattern Analysis</title>
+
+<style>
+
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+table{
+margin:auto;
+background:white;
+color:black;
+border-collapse:collapse;
+}
+
+td,th{
+padding:10px;
+border:1px solid black;
+}
+
+img{
+margin-top:30px;
+width:600px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>AI Contract Risk Analysis</h1>
+
+{% for table in tables %}
+{{ table|safe }}
+{% endfor %}
+
+<h2>Company–Department Network</h2>
+
+<img src="/static/graph.png">
+
+<h2>High Centrality Nodes (Review Recommended)</h2>
+
+<ul>
+
+{% for node in suspicious %}
+<li>{{ node }}</li>
+{% endfor %}
+
+</ul>
+
+</body>
+
+</html>
